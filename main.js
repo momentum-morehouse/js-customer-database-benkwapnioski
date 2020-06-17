@@ -21,16 +21,20 @@ function listCustomers(personArray) {
         let customerText = document.createTextNode(`${customer.name.title} ${customer.name.first} ${customer.name.last} located in: ${customer.location.city} ${customer.location.state}`);
 
         let customerEmail = document.createTextNode(`${customer.email}`);
+        let customerPhone = document.createTextNode(`${customer.phone}`);
 
         let address = document.createElement("p");
         let email = document.createElement("p");
+        let phone = document.createElement("p");
         address.classList.add("address", "measure", "lh-copy");
         email.classList.add("email", "measure", "2h-copy");
+        phone.classList.add("phone")
 
-        address.appendChild(customerText);
-        email.appendChild(customerEmail);
+        address.append(customerText);
+        email.append(customerEmail);
+        phone.append(customerPhone);
 
-        newCustomer.append(address, email)
+        newCustomer.append(address, email, phone)
 
         let customerImage = document.createElement("img");
         customerImage.classList.add("br-100", "h4", "w4", "dib", "ba", "b--black-05", "pa2");
