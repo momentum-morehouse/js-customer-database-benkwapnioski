@@ -27,7 +27,7 @@ function listCustomers(personArray) {
     let customerEmail = document.createElement("email");
     newCustomer.append(customerText, customerEmail);
     customerList.append(newCustomer);
-    newCustomer.append(customerImage, address, customerEmail);
+    newCustomer.prepend(customerImage, address, customerEmail);
     newCustomer.classList.add("ph3", "pv3", "bb", "b--light-silver");
   };
 
