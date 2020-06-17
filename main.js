@@ -15,13 +15,13 @@ function listCustomers(personArray) {
   for (let customer of customers) {
     let newCustomer = document.createElement("li");
 
-    let customerText = document.createTextNode(`"${customer.name.first}" located ${customer.location.city} ${customer.location.state}`);
+    let customerText = document.createTextNode(`${customer.name.first} located ${customer.location.city} ${customer.location.state}`);
     let address = document.createElement("p");
     address.append(customerText)
 
     let customerImage = document.createElement("img")
     customerImage.src = `${customer.picture.thumbnail}`;
-
+    customerImage.classList.add("br-100","h4","w4","dib","ba", "b--black-05", "pa2");
 
 
     let customerEmail = document.createElement("email");
