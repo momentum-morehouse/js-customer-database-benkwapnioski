@@ -19,10 +19,7 @@ function listCustomers(personArray) {
         ${customer.name.last}`);
 
     let customerAddress = document.createTextNode(`${customer.location.street} ${customer.location.city},${customer.location.state}`);
-    // let customerLocation = document.createTextNode(`
-    // ${customer.location.street}
-    // ${customer.location.city}
-    // ${customer.location.state}`);
+  
 
     let customerEmail = document.createTextNode(`${customer.email}`);
     let customerPhone = document.createTextNode(`${customer.phone}`);
@@ -31,9 +28,7 @@ function listCustomers(personArray) {
 
     let name = document.createElement("p");
     let address = document.createElement("p");
-    // let street = document.createElement("p");
-    // let city = document.createElement("p");
-    // let state = document.createElement("p");
+    
 
     let email = document.createElement("p");
     let phone = document.createElement("p");
@@ -43,7 +38,7 @@ function listCustomers(personArray) {
     name.classList.add("name");
     address.classList.add("address");
 
-    // location.classList.add("street", "city", "state");
+    
 
     email.classList.add("email");
     phone.classList.add("phone");
@@ -53,7 +48,6 @@ function listCustomers(personArray) {
     name.append(customerText);
     address.append(customerAddress);
 
-    // location.append(customerLocation);
 
     email.append(customerEmail);
     phone.append(customerPhone);
@@ -65,8 +59,6 @@ function listCustomers(personArray) {
     customerImage.classList.add("br-100", "h4", "w4", "dib", "ba", "b--black-05", "pa2");
     customerImage.src = `${customer.picture.thumbnail}`;
 
-    // let customerEmail = document.createElement("email");
-    //newCustomer.append(address, customerEmail);
 
     newCustomer.prepend(customerImage);
     newCustomer.classList.add("ph3", "pv3", "bb", "b--light-silver");
