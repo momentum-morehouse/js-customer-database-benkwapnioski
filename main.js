@@ -8,8 +8,8 @@ let person = [{
   address: "3747 Elgin St, Roseville, IN 93281"
 }]
 
-
-
+let customerList = document.querySelector('#customer-list');
+console.log(customerList)
 
 function listCustomers(personArray) {
   let customerList = document.querySelector('#customer-list');
@@ -19,27 +19,35 @@ function listCustomers(personArray) {
     let newCustomer = document.createElement("li");
     let customerText = document.createTextNode(`${customer.name.first} 
         ${customer.name.last}`);
-    let customerLocation = document.createTextNode(`${customer.location}`);
+    // let customerLocation = document.createTextNode(`
+    // ${customer.location.street}
+    // ${customer.location.city}
+    // ${customer.location.state}`);
     let customerEmail = document.createTextNode(`${customer.email}`);
     let customerPhone = document.createTextNode(`${customer.phone}`);
     let customerCell = document.createTextNode(`${customer.cell}`);
 
-    let location = document.createElement("p");
+    // let street = document.createElement("p");
+    // let city = document.createElement("p");
+    // let state = document.createElement("p");
+    let name = document.createElement("p")
     let email = document.createElement("p");
     let phone = document.createElement("p");
     let cell = document.createElement("p");
 
-    location.classList.add("address");
+    // location.classList.add("street", "city", "state");
+    name.classList.add("name");
     email.classList.add("email");
     phone.classList.add("phone");
     cell.classList.add("cell")
 
-    location.append(customerText);
+    // location.append(customerLocation);
+    name.append(customerText);
     email.append(customerEmail);
     phone.append(customerPhone);
     cell.append(customerCell);
 
-    newCustomer.append(location, email, phone, cell)
+    newCustomer.append(name, email, phone, cell)
 
     let customerImage = document.createElement("img");
     customerImage.classList.add("br-100", "h4", "w4", "dib", "ba", "b--black-05", "pa2");
